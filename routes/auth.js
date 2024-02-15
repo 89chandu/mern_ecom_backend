@@ -82,7 +82,7 @@ router.post('/login', [
         let user = await User.findOne({ email });
         if (!user) {
 
-            return res.status(400).send({ success, error: "User not found" })
+            return res.status(400).send({ success, error: "User not found check again" })
         }
         const passComp = await bcrypt.compare(password, user.password)
         if (!passComp) {
