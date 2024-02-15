@@ -34,7 +34,7 @@ router.post('/register', [
     try {
         let user = await User.findOne({ $or: [{ email: email }, { phoneNumber: phoneNumber }] });
         if (user) {
-            return res.status(400).send({ error: "Sorry a user already exists" })
+            return res.status(400).send({ error: "Sorry a user already exists plz try different" })
         }
 
         // password hashing
