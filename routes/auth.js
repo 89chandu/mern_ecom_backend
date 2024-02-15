@@ -60,7 +60,7 @@ router.post('/register', [
         res.send({ success, authToken })
     }
     catch (error) {
-        res.status(500).send("Internal server error")
+        res.status(500).send("Internal server error plz check")
     }
 })
 
